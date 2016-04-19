@@ -1,0 +1,7 @@
+apply plugin: 'war'
+
+war {
+    from 'src/examples' // adds a file-set to the root of the archive
+    webInf { from 'src/web/WEB-INF' } // adds a file-set to the WEB-INF dir.
+    webXml = file('src/web/WEB-INF/web.xml') // copies a file to WEB-INF/web.xml
+}
